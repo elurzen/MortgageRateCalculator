@@ -1,10 +1,5 @@
 ﻿var uri = 'api/Calc/';
 
-function formatReq(req) {
-    return req.creditScore + ': $' + req.term;
-}
-
-
 function calcRate() {
     $("#creditScore").css("background-color", "white");
     $("#term").css("background-color", "white");
