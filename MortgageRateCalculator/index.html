@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html xmlns ="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Mortgage Calculator</title>
+    <link rel="stylesheet" type="text/css" href="Content/QuickenLoans.css" />
+    <script src="Scripts/jquery-3.5.1.min.js"></script>
+    <script src="Scripts/calcFunctions.js"></script>
+</head>
+<body style="background-color:#b6121a">
+
+    <img src="Images/QuickenLoans-Logo-Horiz.png" class="qHeaderImage qCentered" />
+    <!--<h2>Mortgage Rate Calculator</h2>-->
+    <div class="qContainer qCentered">
+        <div id="calcTable" class="qTable">
+            <div class="qTableRow">
+                <div class="qTableCell qLeftCell qLabel">
+                    Credit Score:
+                </div>
+                <div class="qTableCell qMiddleCell">
+                    <input id="creditScore" type="text" size="1" class="qInput" oninput="this.value=(parseInt(this.value)||'')"  maxlength="3" autofocus />
+                </div>
+                <div class="qTableCell qRightCell">
+                    <div class="qImageContainer">
+                        <img src="../Images/info.png" class="qInfoImage" onclick="openRocketHq();">
+                        <div>
+                            A credit score is a number ranging from 300-850 that
+                            depicts a consumer's creditworthiness. To find your credit
+                            score, visit <a href="https://www.rockethq.com/" target="_blank" >https://www.rockethq.com/</a> 
+                            or click the red i to open the site in a new window.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="qTableRow">
+                <div class="qTableCell qLeftCell qLabel">
+                    Term:
+                </div>
+                <div class="qTableCell qMiddleCell">
+                    <input id="term" type="text" size="1" oninput="this.value=(parseInt(this.value) || '')" maxlength="2" class="qInput" />
+                </div>
+                <div class="qTableCell qRightCell"> 
+                    <div class="qImageContainer">
+                        <img src="../Images/info.png" class="qInfoImage" />
+                        <div>
+                            The term is the amount of time it would take to pay your 
+                            loan off if you made the minimum principal and interest payment 
+                            every month. You can get a fixed-rate conventional loan with a 
+                            term of anywhere between 8–30 years. 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="qTableRow">
+                <div class="qTableCell qLeftCell qLabel" style="padding-top:10%;">
+                    Your Rate:
+                </div>
+                <div id="rate" class="qTableCell qMiddleCell qLabel">
+
+                </div>
+                <div class="qTableCell qRightCell qLabel">
+                    %
+                </div>
+            </div>
+            <div class="qTableRow">
+                <div class="qTableCell qLeftCell"></div>
+                <div class="qTableCell">
+                    <input type="button" value="Calculate" onclick="calcRate();" class="qCalculateButton" />
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,128 @@
+﻿@font-face {
+    font-family: 'RocketSans';
+    src:url(RocketSans-Regular.woff2);
+}
+
+.qTable {
+    display: table;
+    width: 100%;
+}
+
+.qTableRow {
+    display: table-row;
+}
+
+.qTableCell {
+    display: table-cell;
+    padding-bottom: 2%;
+}
+
+.qLeftCell {
+    padding-left: 5%;
+    text-align:left;
+    width:80%; 
+}
+
+.qMiddleCell{
+    width:10%;
+}
+
+.qRightCell {
+    padding-right: 5%;
+    width:10%;
+}
+
+.qContainer {
+    border-style: solid;
+    border-radius: 25px;
+    border-color:black;
+    background-color:white;
+    width: 55%;
+    height: 100%;    
+    padding-top: 2%;
+}
+
+.qHeaderImage {
+    padding-top: 2%;
+    padding-bottom: 5%;
+    width: 60%;
+}
+
+.qCentered {
+    display: block;
+    margin: auto;
+}
+
+.qLabel {
+    font-size: 3.5vw;
+    font-family: RocketSans, Arial, Helvetica, sans-serif;
+}
+
+.qInput {
+    font-size:3.5vw;
+    border-radius:15px;
+    align-content:center;
+}
+
+.qInput:focus {
+    outline-width:0;
+}
+
+.qInfoImage {
+    float:left;
+    vertical-align:middle;
+    max-width: 100%;
+    width:100%;
+    height:auto;
+}
+
+.qImageContainer {
+    position: relative;
+    width:100%;
+    height:auto;
+    float: left;
+    margin-right: 10px;
+}
+
+.qImageContainer div {
+    position: absolute;
+    top: -5px;
+    right: 105%;
+    background: black;
+    color: white;
+    margin-bottom: 5px;
+    font-family: RocketSans, Arial, Helvetica, sans-serif;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: visibility 0s, opacity 0.5s linear;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
+.qImageContainer:hover {
+    cursor: pointer;
+}
+
+.qImageContainer:hover div {
+    width: 300px;
+    padding: 8px 15px;
+    visibility: visible;
+    opacity: 1.0;
+}
+
+.qCalculateButton {
+    width: 130%;
+    height: 4.5vw;
+    background-color: limegreen;
+    color: white;
+    font-family: RocketSans, Arial, Helvetica, sans-serif;
+    font-size: 2.0vw;
+    border-radius: 15px;
+}
+
+.qCalculateButton:focus {
+    outline-width: 0;
+}
+
+a {
+    color:red
+}
