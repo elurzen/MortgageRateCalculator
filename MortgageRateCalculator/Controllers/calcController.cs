@@ -38,9 +38,23 @@ namespace MortgageRateCalculator.Controllers
                 return Content(HttpStatusCode.BadRequest, err);
             }
 
-            //This is obviously a place holder equation, we'd normally hit the DB here to pull what we needed in order to calculate the rate
-            //rate = a base 2.5% + (0% - 2% depending on credit score) + (0% - 1% depending on term)
-            rate = baseRate + (2.0 * (1.0 - ((creditScore - 300.0) / 550.0))) + ((term - 8.0) / 22.0);
+            if (creditScore > 760)
+            {
+                creditScore = 760;
+            }
+
+            if (creditScore < 680)
+            {
+                rate = -1;
+            }
+            else
+            {
+                //This is obviously a place holder equation, we'd normally hit the DB here to pull what we needed in order to calculate the rate
+                //rate = a base 2.5% + (0% - 2% depending on credit score) + (0% - 1% depending on term)
+                //rate = baseRate + (2.0 * (1.0 - ((creditScore - 300.0) / 550.0))) + ((term - 8.0) / 22.0);
+
+                rate = baseRate + (2.0 * (1.0 - ((creditScore - 300.0) / 460.0))) + ((term - 8.0) / 22.0);
+            }
 
             return Content(HttpStatusCode.OK, rate);
 

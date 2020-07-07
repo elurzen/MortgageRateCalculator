@@ -3,6 +3,10 @@
     src:url(RocketSans-Regular.woff2);
 }
 
+a {
+    color: red
+}
+
 .qTable {
     display: table;
     width: 100%;
@@ -56,6 +60,12 @@
 .qLabel {
     font-size: 3.5vw;
     font-family: RocketSans, Arial, Helvetica, sans-serif;
+}
+
+.qUnqualifiedLabel {
+    font-family: RocketSans, Arial, Helvetica, sans-serif;
+    color: red;
+    font-size: 1.2vw;
 }
 
 .qInput {
@@ -121,8 +131,4 @@
 
 .qCalculateButton:focus {
     outline-width: 0;
-}
-
-a {
-    color:red
 }

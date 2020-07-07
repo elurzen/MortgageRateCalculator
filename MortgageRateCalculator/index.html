@@ -58,12 +58,16 @@
                 <div id="rate" class="qTableCell qMiddleCell qLabel">
 
                 </div>
-                <div class="qTableCell qRightCell qLabel">
+                <div id="percent" class="qTableCell qRightCell qLabel">
                     %
                 </div>
             </div>
             <div class="qTableRow">
-                <div class="qTableCell qLeftCell"></div>
+                <div class="qTableCell qLeftCell">
+                    <div  id="unqualified" class="qUnqualifiedLabel" style="display:none;">
+                        Unfortunately, your credit score is too low to receive a loan
+                    </div>
+                </div>
                 <div class="qTableCell">
                     <input type="button" value="Calculate" onclick="calcRate();" class="qCalculateButton" />
                 </div>

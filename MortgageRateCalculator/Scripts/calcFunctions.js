@@ -4,6 +4,7 @@ function calcRate() {
     $("#creditScore").css("background-color", "white");
     $("#term").css("background-color", "white");
     $("#rate").text("");
+    $("#unqualified").hide();
 
     var validVals = true;
     var cs = $('#creditScore').val();
@@ -27,7 +28,13 @@ function calcRate() {
             contentType: 'application/json; charset=utf-8',
             data: { creditScore: cs, term: t },
             success: function (data) {
-                $('#rate').text((data.toFixed(3)));
+                if (data == -1) {
+                    $("#unqualified").show();
+                }
+                else{
+                    $('#rate').text((data.toFixed(3)));
+                }
+                
             },
             error: function (err) {
                 var error;
